@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#090a0c">
+  <title>The Old House — Horror Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="splash" class="splash-screen" role="button" tabindex="0" aria-label="Continue to game">
+    <div class="splash-credit">developed by fathy</div>
+    <div class="splash-hint">TAP OR CLICK TO CONTINUE</div>
+  </div>
+  <div id="game"></div>
+  <div id="vignette"></div>
+  <div id="menu" class="screen">
+    <div class="menu-card">
+      <p class="eyebrow">A FIRST-PERSON HORROR GAME</p>
+      <h1>THE OLD<br><span>HOUSE</span></h1>
+      <p class="intro">The door is locked. Something is moving upstairs.</p>
+      <button id="playBtn" class="primary">ENTER THE HOUSE</button>
+      <button id="howBtn" class="secondary">HOW TO PLAY</button>
+      <div id="howText" class="how hidden">
+        Find the basement key, solve the three-symbol lock, then escape through the basement door.
+        Stay quiet: the caretaker hears running and can follow you. Hide in wardrobes when you need a moment.
+      </div>
+      <p class="tiny">Original browser game • Headphones recommended</p>
+    </div>
+  </div>
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="objective"><span class="label">OBJECTIVE</span><span id="objectiveText">Find the basement key.</span></div>
+      <div id="status" class="status">QUIET</div>
+    </div>
+    <div id="crosshair">+</div>
+    <div id="message" aria-live="polite"></div>
+    <div id="prompt"></div>
+    <div id="inventory"><span class="label">INVENTORY</span><div id="items">Empty</div></div>
+    <div id="desktopHelp">WASD move · Mouse look · E interact · Ctrl crouch · Shift run · Esc pause</div>
+    <div id="mobileControls">
+      <div id="stickZone"><div id="stick"><div></div></div></div>
+      <button id="lookHint" aria-label="Look around">LOOK</button>
+      <button id="interactBtn" aria-label="Interact">E</button>
+      <button id="crouchBtn" aria-label="Crouch">CROUCH</button>
+      <button id="runBtn" aria-label="Run">RUN</button>
+    </div>
+  </div>
+  <div id="pause" class="screen hidden">
+    <div class="menu-card compact">
+      <p class="eyebrow">TAKE A BREATH</p><h2>PAUSED</h2>
+      <button id="resumeBtn" class="primary">RESUME</button>
+      <button id="restartBtn" class="secondary">RESTART NIGHT</button>
+      <button id="mainBtn" class="secondary">MAIN MENU</button>
+    </div>
+  </div>
+  <div id="ending" class="screen hidden">
+    <div class="menu-card compact">
+      <p id="endingEyebrow" class="eyebrow">THE NIGHT IS OVER</p>
+      <h2 id="endingTitle">YOU ESCAPED</h2>
+      <p id="endingText" class="intro">The cold night air feels unreal.</p>
+      <button id="againBtn" class="primary">PLAY AGAIN</button>
+      <button id="endingMenuBtn" class="secondary">MAIN MENU</button>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
